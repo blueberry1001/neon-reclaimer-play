@@ -13,19 +13,20 @@
 <button id="fullscreen" aria-label="全画面にする">全画面</button><div id="mobile">このゲームはキーボードとマウスが必要です。</div>
 <div id="error"><h2>ゲームを読み込めませんでした</h2><p id="error-message">ページを再読み込みしてください。</p><button onclick="location.reload()">再読み込み</button></div>
 </main>
-<script src="Build/WebGL.loader.js?v=clarity-builds-1"></script>
+<script src="Build/WebGL.loader.js?v=descent-builds-1"></script>
 <script>
 const canvas=document.getElementById('unity-canvas');let instance;
 canvas.addEventListener('contextmenu',e=>e.preventDefault());
 document.getElementById('fullscreen').onclick=()=>{if(instance)instance.SetFullscreen(1);};
 if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))document.getElementById('mobile').style.display='block';
 createUnityInstance(canvas,{
- dataUrl:'Build/WebGL.data.unityweb?v=clarity-builds-1', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=clarity-builds-1',codeUrl:'Build/WebGL.wasm.unityweb?v=clarity-builds-1',streamingAssetsUrl:'StreamingAssets',
+ dataUrl:'Build/WebGL.data.unityweb?v=descent-builds-1', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=descent-builds-1',codeUrl:'Build/WebGL.wasm.unityweb?v=descent-builds-1',streamingAssetsUrl:'StreamingAssets',
  companyName:"Blueberry",productName:"NEON RECLAIMER",productVersion:"0.1.0",devicePixelRatio:Math.min(window.devicePixelRatio||1,1.5),
  autoSyncPersistentDataPath:true,
  showBanner:(message,type)=>{if(type==='error')console.error(message);else console.warn(message);}
 },progress=>{document.getElementById('bar').style.width=(progress*100)+'%';document.getElementById('progress').textContent='読み込み中 '+Math.round(progress*100)+'%';}).then(game=>{instance=game;window.neonGame=game;setTimeout(()=>{if(new URLSearchParams(location.search).has('rendercheck'))game.SendMessage('NEON RECLAIMER','ReportRenderState');if(new URLSearchParams(location.search).has('safe'))game.SendMessage('NEON RECLAIMER','UseSafeWebRendering');},1500);document.getElementById('loading').style.display='none';canvas.focus();}).catch(error=>{console.error(error);document.getElementById('loading').style.display='none';document.getElementById('error').style.display='flex';});
 </script></body></html>
+
 
 
 
