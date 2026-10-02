@@ -29,7 +29,7 @@ html.mobile #loading p{font-size:12px}
 <div id="error"><h2>ゲームを読み込めませんでした</h2><p id="error-message">ページを再読み込みしてください。</p><button onclick="location.reload()">再読み込み</button></div>
 <dialog id="fullscreen-help" aria-labelledby="fullscreen-help-title"><h2 id="fullscreen-help-title">全画面表示について</h2><p id="fullscreen-help-text"></p><button id="fullscreen-help-close">閉じる</button></dialog>
 </main>
-<script src="Build/WebGL.loader.js?v=ultimate-encounters-1"></script>
+<script src="Build/WebGL.loader.js?v=barrier-balance-2"></script>
 <script>
 const canvas=document.getElementById('unity-canvas');let instance;
 // iPadOS can identify as Mac. Do not treat every touch-capable laptop as a phone.
@@ -71,7 +71,7 @@ document.addEventListener('webkitfullscreenchange',updateFullscreenButton);
 updateFullscreenButton();
 
 createUnityInstance(canvas,{
- dataUrl:'Build/WebGL.data.unityweb?v=ultimate-encounters-1', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=ultimate-encounters-1',codeUrl:'Build/WebGL.wasm.unityweb?v=ultimate-encounters-1',streamingAssetsUrl:'StreamingAssets',
+ dataUrl:'Build/WebGL.data.unityweb?v=barrier-balance-2', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=barrier-balance-2',codeUrl:'Build/WebGL.wasm.unityweb?v=barrier-balance-2',streamingAssetsUrl:'StreamingAssets',
  companyName:"Blueberry",productName:"NEON RECLAIMER",productVersion:"0.1.0",devicePixelRatio:renderDpr,
  autoSyncPersistentDataPath:true,
  showBanner:(message,type)=>{if(type==='error')console.error(message);else console.warn(message);}
