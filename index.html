@@ -101,7 +101,7 @@ async function startGame(){
  try{
  if(typeof createUnityInstance!=='function')throw new Error('Unity loader did not initialize');
  const game=await createUnityInstance(canvas,{
- dataUrl:'Build/WebGL.data.unityweb?v=ui-flow-oct4-1', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=ui-flow-oct4-1',codeUrl:'Build/WebGL.wasm.unityweb?v=ui-flow-oct4-1',streamingAssetsUrl:'StreamingAssets',
+ dataUrl:'Build/WebGL.data.unityweb?v=ui-refine-oct4-1', frameworkUrl:'Build/WebGL.framework.js.unityweb?v=ui-refine-oct4-1',codeUrl:'Build/WebGL.wasm.unityweb?v=ui-refine-oct4-1',streamingAssetsUrl:'StreamingAssets',
  companyName:"Blueberry",productName:"NEON RECLAIMER",productVersion:"0.1.0",devicePixelRatio:renderDpr,
  autoSyncPersistentDataPath:true,
  showBanner:(message,type)=>{if(type==='error')console.error(message);else console.warn(message);}
@@ -115,7 +115,7 @@ async function startGame(){
 }
 // Install failure handlers before fetching the loader, including its initial network request.
 const loader=document.createElement('script');
-loader.src='Build/WebGL.loader.js?v=ui-flow-oct4-1';
+loader.src='Build/WebGL.loader.js?v=ui-refine-oct4-1';
 loader.onload=startGame;
 loader.onerror=()=>failLoading(new Error('Unity loader could not be downloaded'),'通信状態を確認して、再読み込みしてください。');
 watchLoading();document.body.appendChild(loader);
