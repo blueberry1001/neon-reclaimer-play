@@ -2,7 +2,7 @@
 
 敵を倒して装備を選び、どこまで進めるかに挑む3Dアクションです。
 
-[現在の公開版で遊ぶ](https://blueberry1001.github.io/neon-reclaimer-play/?v=ui-motion-oct4-1)
+[現在の公開版で遊ぶ](https://blueberry1001.github.io/neon-reclaimer-play/?v=ui-flow-oct4-1)
 
 ## 操作
 
